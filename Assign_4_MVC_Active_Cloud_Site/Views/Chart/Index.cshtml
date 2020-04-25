@@ -12,11 +12,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Chart.js examples</title>
+    <title>Distribution</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 </head>
 <body>
-    <h1> Bar chart example</h1>
+    
 
     <canvas id="barchartexample" width="800" height="450"></canvas>
 
@@ -27,7 +27,7 @@
         labels: [@Html.Raw(@Model.Labels)],
         datasets: [
           {
-            label: "Population (millions)",
+            label: "Count",
             backgroundColor: [@Html.Raw(@Model.Colors)],
             data: [@Model.Data]
           }
