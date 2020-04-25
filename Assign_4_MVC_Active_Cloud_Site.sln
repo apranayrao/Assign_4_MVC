@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assign_4_MVC_Active_Cloud_Site", "Assign_4_MVC_Active_Cloud_Site\Assign_4_MVC_Active_Cloud_Site.csproj", "{51DBC80D-1166-4BDF-BA5B-B0848D5A31D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51DBC80D-1166-4BDF-BA5B-B0848D5A31D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DBC80D-1166-4BDF-BA5B-B0848D5A31D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DBC80D-1166-4BDF-BA5B-B0848D5A31D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DBC80D-1166-4BDF-BA5B-B0848D5A31D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {203C1DC9-7B26-4292-9E6A-69F3E1334CF1}
+	EndGlobalSection
+EndGlobal

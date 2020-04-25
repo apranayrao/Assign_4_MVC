@@ -1,0 +1,47 @@
+﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Rootobject
+<h1>Food Products</h1>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Industry Code
+            </th>
+            <th>
+                Food Brand
+            </th>
+            <th>
+                Industry Name
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.results)
+        {
+            foreach (var prod in item.products)
+            {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => prod.industry_code)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => prod.name_brand)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => prod.industry_name)
+            </td>
+        </tr>
+
+                }
+
+                }
+
+</tbody>
+</table>
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>

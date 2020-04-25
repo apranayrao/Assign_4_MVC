@@ -1,0 +1,44 @@
+﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Products
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Products</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="name_brand" class="control-label"></label>
+                <input asp-for="name_brand" class="form-control" />
+                <span asp-validation-for="name_brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="industry_name" class="control-label"></label>
+                <input asp-for="industry_name" class="form-control" />
+                <span asp-validation-for="industry_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="industry_code" class="control-label"></label>
+                <input asp-for="industry_code" class="form-control" />
+                <span asp-validation-for="industry_code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

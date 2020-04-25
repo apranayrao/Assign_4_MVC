@@ -1,0 +1,36 @@
+﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Products
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name_brand)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name_brand)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.industry_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.industry_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.industry_code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.industry_code)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
