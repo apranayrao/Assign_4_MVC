@@ -37,7 +37,7 @@ namespace Assign_4_MVC_Active_Cloud_Site.APIHandlerManager
         /// <returns></returns>
         public Rootobject GetData()
         {
-            string PRODUCT_PATH = BASE_URL + "&limit=10";
+            string PRODUCT_PATH = BASE_URL + "&limit=50";
             string resutlsdata = "";
 
             Rootobject results = null;

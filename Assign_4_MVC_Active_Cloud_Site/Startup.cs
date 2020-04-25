@@ -66,7 +66,7 @@ namespace Assign_4_MVC_Active_Cloud_Site
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
+                    name: "default", 
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }

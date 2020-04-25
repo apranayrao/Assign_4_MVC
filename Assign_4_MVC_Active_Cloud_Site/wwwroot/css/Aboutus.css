@@ -1,62 +1,28 @@
-﻿body
-{
-    font-family:sans-serif;
-    background-color: white;	
-}
-img {
-  border-radius: 8px;
-}
-.center {
-    overflow: hidden;
-    background-color: white;
+﻿.github {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
-    .center a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-        .center a:hover {
-            background-color: lightslategray;
-            color: black;
-        }
-
-        .center a.active {
-            background-color: black;
-            color: white;
-        }
-
-    .center .icon {
-        display: none;
-    }
-.github {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
 .linkedin {
-  background-color: #0000ff; /* Blue */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+    background-color: #0000ff; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
-.linkedin-info{
-	position: relative;
-	top: -250px;
-	left: 300px;
-	overflow: hidden;
+
+.linkedin-info {
+    position: relative;
+    top: -250px;
+    left: 300px;
+    overflow: hidden;
 }

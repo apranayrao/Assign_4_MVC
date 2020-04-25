@@ -3,45 +3,74 @@
 @{
     ViewData["Title"] = "Index";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#tbl tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-<h1>Index</h1>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add new Items</a>
 </p>
+
+<input id="myInput" type="text" placeholder="Search..">
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name_brand)
+                Brand Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.industry_name)
+                Industry Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.industry_code)
+                Industry Code
             </th>
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.name_brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.industry_name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.industry_code)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+    <tbody id="tbl">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name_brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.industry_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.industry_code)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

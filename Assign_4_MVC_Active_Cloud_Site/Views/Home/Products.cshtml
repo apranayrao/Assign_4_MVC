@@ -1,6 +1,38 @@
 ﻿@model Assign_4_MVC_Active_Cloud_Site.Models.Rootobject
-<h1>Food Products</h1>
-<hr />
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<input id="myInput" type="text" placeholder="Search..">
+<br>
+<br>
 <table class="table">
     <thead>
         <tr>
@@ -8,7 +40,7 @@
                 Industry Code
             </th>
             <th>
-                Food Brand
+                Brand Name
             </th>
             <th>
                 Industry Name
@@ -16,31 +48,31 @@
         </tr>
     </thead>
 
-    <tbody>
+    <tbody id="myTable">
         @foreach (var item in Model.results)
         {
             foreach (var prod in item.products)
             {
-        <tr>
-            <td>
+                <tr>
+                    <td>
 
-                @Html.DisplayFor(modelItem => prod.industry_code)
-            </td>
-            <td>
+                        @Html.DisplayFor(modelItem => prod.industry_code)
+                    </td>
+                    <td>
 
-                @Html.DisplayFor(modelItem => prod.name_brand)
-            </td>
-            <td>
+                        @Html.DisplayFor(modelItem => prod.name_brand)
+                    </td>
+                    <td>
 
-                @Html.DisplayFor(modelItem => prod.industry_name)
-            </td>
-        </tr>
+                        @Html.DisplayFor(modelItem => prod.industry_name)
+                    </td>
+                </tr>
 
-                }
+            }
 
-                }
+        }
 
-</tbody>
+    </tbody>
 </table>
 <script>
     alertDbSave(@ViewBag.dbSuccessComp);

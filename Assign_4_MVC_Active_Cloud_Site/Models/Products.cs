@@ -72,4 +72,14 @@ namespace Assign_4_MVC_Active_Cloud_Site.Models
         [Column(TypeName = "nvarchar(200)")]
         public string outcomes { get; set; }
     }
+
+    public class ChartModel
+    {
+        public string ChartType { get; set; }
+        public string Labels { get; set; }
+
+        public string Colors { get; set; }
+        public string Data { get; set; }
+        public string Title { get; set; }
+    }
 }
